@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../components/custom_model_bottom_sheet.dart';
 import '../components/custom_notes_container.dart';
 
 class NotesScreen extends StatelessWidget {
@@ -12,7 +13,14 @@ class NotesScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return CustomModelBottomSheet();
+            },
+          );
+        },
         child: Icon(
           Icons.add,
           size: 35,
@@ -42,6 +50,7 @@ class NotesScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.symmetric(vertical: 10),
               itemBuilder: (context, index) {
                 return CustomNotesContainer();
               },
