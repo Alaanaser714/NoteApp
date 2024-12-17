@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SimpleBlocObservase implements BlocObserver {
+class SimpleBlocObserve implements BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
-    debugPrint("chages== $change");
+    debugPrint("chage== $change");
   }
 
   @override
-  void onClose(BlocBase bloc) {}
+  void onClose(BlocBase bloc) {
+    debugPrint("close== $bloc");
+  }
 
   @override
-  void onCreate(BlocBase bloc) {}
+  void onCreate(BlocBase bloc) {
+    debugPrint("create== $bloc");
+  }
 
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {}

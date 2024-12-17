@@ -15,6 +15,10 @@ class NotesScreen extends StatelessWidget {
         backgroundColor: Colors.green,
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
             context: context,
             builder: (context) {
               return CustomModelBottomSheet();
