@@ -29,7 +29,7 @@ class CustomModelBottomSheet extends StatelessWidget {
         builder: (context, state) {
           return ModalProgressHUD(
               inAsyncCall: state is AddNotesLoading ? true : false,
-              child: AddNotesForm());
+              child: SingleChildScrollView(child: AddNotesForm()));
         },
       ),
     );
