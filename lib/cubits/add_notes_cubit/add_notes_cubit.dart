@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:note_app/cubits/add_notes_cubits/add_notes_states.dart';
+import 'package:hive/hive.dart';
+import 'package:note_app/cubits/add_notes_cubit/add_notes_states.dart';
 import 'package:note_app/models/notes_model.dart';
 
 class AddNotesCubits extends Cubit<AddNotesStates> {
