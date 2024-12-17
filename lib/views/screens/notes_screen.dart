@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubits/notes_cubit/notes_cubit.dart';
+import 'package:note_app/views/components/custom_listview_notes.dart';
 import '../components/custom_model_bottom_sheet.dart';
-import '../components/custom_notes_container.dart';
 
 class NotesScreen extends StatelessWidget {
   const NotesScreen({super.key});
@@ -53,18 +53,7 @@ class NotesScreen extends StatelessWidget {
             )
           ],
         ),
-        body: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                padding: EdgeInsets.symmetric(vertical: 10),
-                itemBuilder: (context, index) {
-                  return CustomNotesContainer();
-                },
-              ),
-            ),
-          ],
-        ),
+        body: CustomListviewNotes()
       ),
     );
   }
