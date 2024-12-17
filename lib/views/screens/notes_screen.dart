@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/cubits/notes_cubit/notes_cubit.dart';
+
 import 'package:note_app/views/components/custom_listview_notes.dart';
 import '../components/custom_model_bottom_sheet.dart';
 
@@ -11,9 +10,7 @@ class NotesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
+    return Scaffold(
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.green,
           onPressed: () {
@@ -53,8 +50,6 @@ class NotesScreen extends StatelessWidget {
             )
           ],
         ),
-        body: CustomListviewNotes()
-      ),
-    );
+        body: CustomListviewNotes());
   }
 }
