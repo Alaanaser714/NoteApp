@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/widgets/colors_item.dart';
 
 class ColorsListview extends StatefulWidget {
@@ -34,6 +36,8 @@ class _ColorsListviewState extends State<ColorsListview> {
               setState(() {
                 currentIndex = index;
               });
+              BlocProvider.of<AddNotesCubits>(context).color =
+                  colorsList[index];
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5),
