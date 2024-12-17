@@ -34,7 +34,9 @@ class _CustomListviewNotesState extends State<CustomListviewNotes> {
                 itemCount: notes.length,
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 itemBuilder: (context, index) {
-                  return CustomNotesContainer();
+                  return CustomNotesContainer(
+                    notesModel: notes[index],
+                  );
                 },
               ),
             ),
