@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
       create: (context) => NotesCubit(),
       child: MaterialApp(
         theme: ThemeData(
-          fontFamily: "Change",
-        ),
+            // fontFamily: "Change",
+            ),
         locale: const Locale("ar"),
         supportedLocales: const [
           Locale('ar'),
