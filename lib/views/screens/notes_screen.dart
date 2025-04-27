@@ -35,20 +35,6 @@ class NotesScreen extends StatelessWidget {
             "Notes",
             style: TextStyle(fontSize: 30),
           ),
-          actions: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(.25),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                ),
-              ),
-            )
-          ],
         ),
         body: CustomListviewNotes());
   }
